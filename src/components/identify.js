@@ -1,7 +1,8 @@
 import * as mobilenet from "@tensorflow-models/mobilenet";
 import { useState, useEffect, useRef } from "react";
-import '@tensorflow/tfjs';
-import styled from 'styled-components'
+import "@tensorflow/tfjs";
+import styled from "styled-components";
+import { ClipLoader } from "react-spinners";
 
 export default function Identify() {
   const [isModelLoading, setIsModelLoading] = useState(false);
@@ -25,7 +26,7 @@ export default function Identify() {
 
   const uploadImage = (e) => {
     const { files } = e.target;
-    if (files.length > 0) { 
+    if (files.length > 0) {
       const url = URL.createObjectURL(files[0]);
       setImageURL(url);
     } else {
@@ -42,8 +43,25 @@ export default function Identify() {
     loadModel();
   }, []);
 
+  const override = {
+    display: "flex",
+    margin: "0 auto",
+    borderColor: "#E50915",
+    textAlign: "center",
+  };
+
   if (isModelLoading) {
-    return <h2>모델을 불러오는 중...</h2>;
+    return (
+      <div>
+        <LoadText>모델을 불러오는 중...</LoadText>
+        <ClipLoader
+          color="#E50915"
+          loading={isModelLoading}
+          cssOverride={override}
+          size={50}
+        />
+      </div>
+    );
   }
 
   console.log(results);
@@ -80,7 +98,7 @@ export default function Identify() {
                 {index === 0 && <Best>최고 확률</Best>}
               </span>
             </Container>
-          )
+          );
         })}
       </div>
       <div>{imageURL && <button onClick={identify}>판별하기</button>}</div>
@@ -88,31 +106,35 @@ export default function Identify() {
   );
 }
 
+const LoadText = styled.h2`
+  text-align: center;
+`
+
 const Input = styled.input`
   width: 200px;
   height: 40px;
-`
+`;
 
 const InputContainer = styled.div`
   width: 200px;
   height: 40px;
-`
+`;
 
 const MainTitle = styled.h1`
   text-align: center;
   width: 100%;
   height: 40px;
-  background-color: #3498DB;
+  background-color: #3498db;
   color: white;
   margin-top: 0px;
-`
+`;
 
 const Best = styled.span`
   background-color: black;
   color: white;
   font-weight: 700;
-`
+`;
 
 const Container = styled.div`
   margin-top: 30px;
-`
+`;
