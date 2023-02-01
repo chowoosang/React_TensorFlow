@@ -2,7 +2,7 @@ import * as mobilenet from "@tensorflow-models/mobilenet";
 import { useState, useEffect, useRef } from "react";
 import "@tensorflow/tfjs";
 import styled from "styled-components";
-import RedSpinner from './hooks/spinner';
+import RedSpinner from "./hooks/spinner";
 
 export default function Identify() {
   const [isModelLoading, setIsModelLoading] = useState(false);
@@ -47,7 +47,7 @@ export default function Identify() {
     return (
       <div>
         <LoadText>모델을 불러오는 중...</LoadText>
-        <RedSpinner loading={isModelLoading} />
+        <RedSpinner loading={isModelLoading} size={50} />
       </div>
     );
   }
@@ -96,7 +96,7 @@ export default function Identify() {
 
 const LoadText = styled.h2`
   text-align: center;
-`
+`;
 
 const Input = styled.input`
   width: 200px;
