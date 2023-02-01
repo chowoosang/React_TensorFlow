@@ -2,6 +2,7 @@ import '@tensorflow/tfjs';
 import * as bodyPix from '@tensorflow-models/body-pix';
 import { useEffect, useState } from 'react';
 import { useRef } from 'react';
+import { ClipLoader } from 'react-spinners';
 
 
 const Remove = () => {
@@ -42,7 +43,7 @@ const Remove = () => {
         const newImgData = newImg.data;
 
         segmentation.data.forEach((segment, i) => {
-            if (segment == 1) {
+            if (segment === 1) {
                 newImgData[i*4] = imgData[i*4]
                 newImgData[i*4+1] = imgData[i*4+1]
                 newImgData[i*4+2] = imgData[i*4+2]

@@ -2,7 +2,7 @@ import * as mobilenet from "@tensorflow-models/mobilenet";
 import { useState, useEffect, useRef } from "react";
 import "@tensorflow/tfjs";
 import styled from "styled-components";
-import { ClipLoader } from "react-spinners";
+import RedSpinner from './hooks/spinner';
 
 export default function Identify() {
   const [isModelLoading, setIsModelLoading] = useState(false);
@@ -43,23 +43,11 @@ export default function Identify() {
     loadModel();
   }, []);
 
-  const override = {
-    display: "flex",
-    margin: "0 auto",
-    borderColor: "#E50915",
-    textAlign: "center",
-  };
-
   if (isModelLoading) {
     return (
       <div>
         <LoadText>모델을 불러오는 중...</LoadText>
-        <ClipLoader
-          color="#E50915"
-          loading={isModelLoading}
-          cssOverride={override}
-          size={50}
-        />
+        <RedSpinner loading={isModelLoading} />
       </div>
     );
   }
@@ -90,7 +78,7 @@ export default function Identify() {
       <div>
         {results.map((result, index) => {
           return (
-            <Container>
+            <Container key={result.className}>
               <span>{result.className}</span>
               <br />
               <span>
