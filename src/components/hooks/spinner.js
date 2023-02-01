@@ -1,7 +1,7 @@
 import React from "react";
 import { ClipLoader } from "react-spinners";
 
-const RedSpinner = ({ loading }) => {
+const RedSpinner = ({ loading, size }) => {
   const override = {
     display: "flex",
     margin: "0 auto",
@@ -14,7 +14,7 @@ const RedSpinner = ({ loading }) => {
       color="#e50915"
       loading={loading}
       cssOverride={override}
-      size={50}
+      size={size}
     />
   );
 };
