@@ -118,6 +118,7 @@ const Input = styled.input`
 const InputContainer = styled.div`
   width: 200px;
   height: 40px;
+  background-color: black;
 `;
 
 const MainTitle = styled.h1`
