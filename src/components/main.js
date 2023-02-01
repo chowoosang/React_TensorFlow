@@ -11,6 +11,9 @@ export default function Main() {
       <ContainerList>
         <Link to="/delete-background">배경 인식 및 제거기</Link>
       </ContainerList>
+      <ContainerList>
+        <Link to="/webcam-detection">웹캠으로 사물 인식하기</Link>
+      </ContainerList>
     </Container>
   );
 }
