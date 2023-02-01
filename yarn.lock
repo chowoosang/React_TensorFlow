@@ -2069,6 +2069,11 @@
   resolved "https://registry.yarnpkg.com/@tensorflow-models/body-pix/-/body-pix-2.2.0.tgz#96269095f35fb52fdf8529a81f59b97366f12173"
   integrity sha512-e8PEf8xWlWhXJtGvlTQpdRyUuDXKAFJT/f8SWiBfvim5BAUyFp2dTeVV3gjDDp8MUEo7T3lofTZUexy/aG4YEA==
 
+"@tensorflow-models/coco-ssd@^2.2.2":
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/@tensorflow-models/coco-ssd/-/coco-ssd-2.2.2.tgz#2a308b3b11a106bf640c5245b980c79df8208b60"
+  integrity sha512-Jey2JscmKEValcFZH2ZLz14s8KPRmVtfJ0d0M3dPhvBp9dJiGNanVXr/pJAY5OS7emKj9uSciGhdkHWXY9Hovw==
+
 "@tensorflow-models/mobilenet@^2.1.0":
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/@tensorflow-models/mobilenet/-/mobilenet-2.1.0.tgz#58583f0793a7091eda370aa441d09d94b808aeb1"
@@ -8218,6 +8223,11 @@ react-scripts@5.0.1:
     workbox-webpack-plugin "^6.4.1"
   optionalDependencies:
     fsevents "^2.3.2"
+
+react-webcam@^7.0.1:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/react-webcam/-/react-webcam-7.0.1.tgz#8249e1d621eb4bba7e3f52135f562439d0528df3"
+  integrity sha512-8E/Eb/7ksKwn5QdLn67tOR7+TdP9BZdu6E5/DSt20v8yfW/s0VGBigE6VA7R4278mBuBUowovAB3DkCfVmSPvA==
 
 react@^18.2.0:
   version "18.2.0"
