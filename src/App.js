@@ -14,7 +14,7 @@ const App = () => {
         <Route path="/" element={<Main />}></Route>
         <Route path="/image-identify" element={<Identify />}></Route>
         <Route path="/delete-background" element={<Remove />}></Route>
-        <Route path="/webcam-detction" element={<Detection />}></Route>
+        <Route path="/webcam-detection" element={<Detection />}></Route>
       </Routes>
     </BrowserRouter>
   )
