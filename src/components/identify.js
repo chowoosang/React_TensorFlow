@@ -50,15 +50,15 @@ export default function Identify() {
 
   return (
     <div>
-      <h1>이미지 식별기</h1>
-      <div>
-        <input
+      <MainTitle>이미지 식별기</MainTitle>
+      <InputContainer>
+        <Input
           type="file"
           accept="image/*"
           capture="camera"
           onChange={uploadImage}
         />
-      </div>
+      </InputContainer>
       <div>
         {imageURL && (
           <img
@@ -87,6 +87,25 @@ export default function Identify() {
     </div>
   );
 }
+
+const Input = styled.input`
+  width: 200px;
+  height: 40px;
+`
+
+const InputContainer = styled.div`
+  width: 200px;
+  height: 40px;
+`
+
+const MainTitle = styled.h1`
+  text-align: center;
+  width: 100%;
+  height: 40px;
+  background-color: #3498DB;
+  color: white;
+  margin-top: 0px;
+`
 
 const Best = styled.span`
   background-color: black;
