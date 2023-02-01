@@ -2,8 +2,7 @@ import '@tensorflow/tfjs';
 import * as bodyPix from '@tensorflow-models/body-pix';
 import { useEffect, useState } from 'react';
 import { useRef } from 'react';
-import { ClipLoader } from 'react-spinners';
-
+import RedSpinner from './hooks/spinner';
 
 const Remove = () => {
     const canvasRef = useRef(null);
@@ -63,7 +62,10 @@ const Remove = () => {
         <div>
             <canvas ref={canvasRef}/>
             <div>
-                {loading ? <h2>제거중...</h2> : null}
+                {loading ? <div>
+                    <h2>로딩중...</h2>
+                    <RedSpinner loading={loading} />
+                </div> : null}
             </div>
             <button onClick={backgroundRemoval}>제거</button>
         </div>
