@@ -11,8 +11,8 @@ export default function Identify() {
   const [imageURL, setImageURL] = useState(null);
   const [results, setResults] = useState([]);
 
-  const titleUpdater = useTitle("불러오는 중...")
-  setTimeout(() => titleUpdater("이미지 분류"))
+  const titleUpdater = useTitle("불러오는 중...");
+  setTimeout(() => titleUpdater("이미지 분류"));
 
   const imageRef = useRef();
 
@@ -62,7 +62,9 @@ export default function Identify() {
     <div>
       <MainTitle>이미지 식별기</MainTitle>
       <InputContainer>
-        <Input
+        <Label htmlFor="ex_file">업로드</Label>
+        <input
+          id="ex_file"
           type="file"
           accept="image/*"
           capture="camera"
@@ -98,6 +100,20 @@ export default function Identify() {
   );
 }
 
+const Label = styled.label`
+  display: inline-block;
+  padding: .5em .75em;
+  color: #999;
+  font-size: inherit;
+  line-height: normal;
+  vertical-align: middle;
+  background-color: #fdfdfd;
+  cursor: pointer;
+  border: 1px solid #ebebeb;
+  border-bottom-color: #e2e2e2;
+  border-radius: .25em;
+`;
+
 const LoadText = styled.h2`
   text-align: center;
 `;
@@ -110,7 +126,16 @@ const Input = styled.input`
 const InputContainer = styled.div`
   width: 200px;
   height: 40px;
-  background-color: black;
+  input[type="file"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
 `;
 
 const MainTitle = styled.h1`
