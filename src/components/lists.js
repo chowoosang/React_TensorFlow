@@ -23,7 +23,7 @@ export default function Lists() {
                 <InnerSpace />
                 <LogoStyle src={logo} alt="이미지" />
               </LogoContainer>
-              <Label>이미지 판별</Label>
+              <Label>이미지 분류</Label>
               <Description>
                 ImageNet 데이터베이스의 라벨로 이미지를 분류합니다. (MobileNet)
               </Description>
