@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import logo from '../assets/imgs/tensor_logo.png';
+import logo from "../assets/imgs/tensor_logo.png";
 
 export default function Lists() {
   return (
@@ -16,7 +16,9 @@ export default function Lists() {
         <ModelLists>
           <Models>
             <ModelContainer>
+              <LogoContainer>
                 <LogoStyle src={logo} alt="이미지" />
+              </LogoContainer>
             </ModelContainer>
           </Models>
           <Models>
@@ -31,10 +33,16 @@ export default function Lists() {
   );
 }
 
+const LogoContainer = styled.div`
+  width: 120px;
+  height: 110px;
+  margin: 0 auto;
+`;
+
 const LogoStyle = styled.img`
   width: 120px;
   height: 110px;
-`
+`;
 
 const MidSpace = styled.div`
   width: 597.5px;
