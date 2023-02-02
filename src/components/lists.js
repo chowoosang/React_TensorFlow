@@ -17,6 +17,7 @@ export default function Lists() {
           <Models>
             <ModelContainer>
               <LogoContainer>
+                <InnerSpace />
                 <LogoStyle src={logo} alt="이미지" />
               </LogoContainer>
             </ModelContainer>
@@ -32,6 +33,10 @@ export default function Lists() {
     </div>
   );
 }
+
+const InnerSpace = styled.div`
+  height: 70px;
+`
 
 const LogoContainer = styled.div`
   width: 120px;
