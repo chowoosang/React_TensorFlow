@@ -9,9 +9,21 @@ export default function Lists() {
             <Title>Tensorflow.js 모델 기반 딥러닝 기능</Title>
             <div>
                 <ModelLists>
-                    <Models>이미지 판별</Models>
-                    <Models>배경 이미지 인식 및 제거</Models>
-                    <Models>웹캠 사물 탐지</Models>
+                    <Models>
+                        <ModelContainer>
+                            이미지 판별
+                        </ModelContainer>
+                    </Models>
+                    <Models>
+                        <ModelContainer>
+                            배경 이미지 인식 및 제거
+                        </ModelContainer>
+                    </Models>
+                    <Models>
+                        <ModelContainer>
+                            웹캠 사물 탐지
+                        </ModelContainer>
+                    </Models>
                 </ModelLists>
             </div>
         </div>
