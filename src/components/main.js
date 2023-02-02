@@ -24,6 +24,9 @@ const LinkStyle = styled(Link)`
   color: #2F96F0;
   text-decoration: none;
   font-size: 16px;
+  &:hover {
+    opacity: 0.7
+  }
 `;
 
 const easeIn = keyframes`
