@@ -4,6 +4,8 @@ import logo from "../assets/imgs/tensor_logo.png";
 import { useNavigate } from "react-router-dom";
 
 export default function Lists() {
+    const navigate = useNavigate();
+
   return (
     <div>
       <TopSpace />
@@ -16,7 +18,7 @@ export default function Lists() {
       <div>
         <ModelLists>
           <Models>
-            <ModelContainer>
+            <ModelContainer onClick={() => navigate("/image-identify")}>
               <LogoContainer>
                 <InnerSpace />
                 <LogoStyle src={logo} alt="이미지" />
