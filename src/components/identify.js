@@ -95,15 +95,19 @@ export default function Identify() {
           );
         })}
       </div>
-      <div>{imageURL && <button onClick={identify}>판별하기</button>}</div>
+      <div>{imageURL && <IdenBtn onClick={identify}>판별하기</IdenBtn>}</div>
     </div>
   );
 }
 
+const IdenBtn = styled.button`
+  
+`
+
 const Label = styled.label`
   display: inline-block;
   padding: .5em .75em;
-  color: #999;
+  color: black;
   font-size: inherit;
   line-height: normal;
   vertical-align: middle;
@@ -118,10 +122,6 @@ const LoadText = styled.h2`
   text-align: center;
 `;
 
-const Input = styled.input`
-  width: 200px;
-  height: 40px;
-`;
 
 const InputContainer = styled.div`
   width: 200px;
@@ -136,6 +136,7 @@ const InputContainer = styled.div`
     clip: rect(0, 0, 0, 0);
     border: 0;
   }
+  margin-left: 100px;
 `;
 
 const MainTitle = styled.h1`
