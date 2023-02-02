@@ -105,7 +105,7 @@ export default function Identify() {
               </div>
               <br />
               <div style={{ color: "white", paddingLeft: "10px", paddingBottom: '7px' }}>
-                신뢰도: {(result.probability * 100).toFixed(2)}%{" "}
+                신뢰도: {(result.probability * 100).toFixed(1)}%{" "}
                 {index === 0 && <Best>최고 확률!</Best>}
               </div>
             </Container>
