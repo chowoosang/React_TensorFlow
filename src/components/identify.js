@@ -142,7 +142,7 @@ const IdenBtn = styled.button`
     color: black;
     border: 1px solid black;
   }
-  margin-top: 80px;
+  margin-top: 120px;
   margin-left: 100px;
 `;
 
