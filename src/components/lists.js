@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import logo from "../assets/imgs/tensor_logo.png";
+import { useNavigate } from "react-router-dom";
 
 export default function Lists() {
   return (
@@ -21,6 +22,7 @@ export default function Lists() {
                 <LogoStyle src={logo} alt="이미지" />
               </LogoContainer>
               <Label>이미지 판별</Label>
+              <Description>ImageNet 데이터베이스의 라벨로 이미지를 분류합니다. (MobileNet)</Description>
             </ModelContainer>
           </Models>
           <Models>
@@ -34,6 +36,15 @@ export default function Lists() {
     </div>
   );
 }
+
+const Description = styled.p`
+  font-size: 14px;
+  color: #425066;
+  margin-left: 18px;
+  margin-top: -100px;
+  width: 208.73px;
+  height: 44px;
+`
 
 const Label = styled.p`
   font-size: 16px;
