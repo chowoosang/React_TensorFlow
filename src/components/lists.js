@@ -30,15 +30,16 @@ export default function Lists() {
     )
 }
 
-
 const ModelContainer = styled.div`
   width: 268.73px;
   height: 318.11px;
-  border: 1px solid black;
+  border: 1px solid #E6E6E6;
+  border-radius: 6px;
 `
 
 const Models = styled.li`
   list-style: none;
+  margin-left: 40px;
 `
 
 const ModelLists = styled.ul`
