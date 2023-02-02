@@ -6,6 +6,7 @@ export default function Lists() {
         <div>
             <TopSpace />
             <Title>Tensorflow.js 모델 기반 딥러닝 기능</Title>
+            <MidSpace />
             <div>
                 <ModelLists>
                     <Models>
@@ -28,6 +29,10 @@ export default function Lists() {
         </div>
     )
 }
+
+const MidSpace = styled.div`
+  height: 50px;
+`
 
 const ModelContainer = styled.div`
   width: 268.73px;
