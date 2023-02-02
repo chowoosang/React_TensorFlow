@@ -30,7 +30,7 @@ export default function Lists() {
             </ModelContainer>
           </Models>
           <Models>
-            <ModelContainer onClick={() => navigate("/image-identify")}>
+            <ModelContainer onClick={() => navigate("/delete-background")}>
               <LogoContainer>
                 <InnerSpace />
                 <LogoStyle src={logo} alt="이미지" />
@@ -49,7 +49,7 @@ export default function Lists() {
               </LogoContainer>
               <Label>웹캠 사물 탐지</Label>
               <Description>
-                ImageNet 데이터베이스의 라벨로 이미지를 분류합니다. (MobileNet)
+                실시간으로 웹캠 내부의 여러 객체를 현지화하고 식별합니다. (Coco SSD)
               </Description>
             </ModelContainer>
           </Models>
