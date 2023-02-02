@@ -1,28 +1,33 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export default function Main() {
   return (
-    <Container>
-      <ContainerList>
-        <Link to="/image-identify">이미지 식별기</Link>
-      </ContainerList>
-      <ContainerList>
-        <Link to="/delete-background">배경 인식 및 제거기</Link>
-      </ContainerList>
-      <ContainerList>
-        <Link to="/webcam-detection">웹캠으로 사물 인식하기</Link>
-      </ContainerList>
-    </Container>
-  );
+    <div>
+      <TopSpace />
+      <Title>DeepLearning Projects</Title>
+    </div>
+  )
 }
 
-const Container = styled.ul`
-  list-style: none;
-  display: flex;
-`;
+const easeIn = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
 
-const ContainerList = styled.li`
-  padding: 30px;
-`;
+  100% {
+    opacity: 1;
+  }
+`
+
+const Title = styled.p`
+  font-size: 40px;
+  font-weight: 620;
+  text-align: center;
+  animation: ${easeIn} 1s ease-in;
+`
+
+const TopSpace = styled.div`
+  height: 380px;
+`
