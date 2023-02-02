@@ -4,10 +4,14 @@ import { useEffect, useState } from "react";
 import { useRef } from "react";
 import RedSpinner from "./hooks/spinner";
 import styled from "styled-components";
+import useTitle from "./hooks/title";
 
 const Remove = () => {
   const canvasRef = useRef(null);
   const [loading, setLoading] = useState(false);
+
+  const titleUpdater = useTitle("불러오는 중...");
+  setTimeout(() => titleUpdater("배경 제거"))
 
   const loadImage = () => {
     const img = new Image();
