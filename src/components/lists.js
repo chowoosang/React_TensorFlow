@@ -82,6 +82,7 @@ const ModelContainer = styled.div`
   height: 318.11px;
   border: 1px solid #e6e6e6;
   border-radius: 6px;
+  cursor: pointer;
 `;
 
 const Models = styled.li`
