@@ -75,14 +75,39 @@ const Remove = () => {
           </div>
         ) : null}
       </div>
-      <button onClick={backgroundRemoval}>제거</button>
+      <ButtonContainer>
+        <Button onClick={backgroundRemoval}>제거</Button>
+      </ButtonContainer>
     </div>
   );
 };
 
+const Button = styled.button`
+  width: 150px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out;
+  &:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+  }
+`;
+
+const ButtonContainer = styled.div`
+  width: 150px;
+  height: 50px;
+  margin: 0 auto;
+  margin-top: 50px;
+`;
+
 const LoadingText = styled.h2`
   text-align: center;
-`
-
+`;
 
 export default Remove;
