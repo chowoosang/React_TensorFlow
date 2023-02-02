@@ -78,9 +78,16 @@ export default function Identify() {
             alt="미리보기"
             ref={imageRef}
             crossOrigin="origin"
+            style={{
+              marginLeft: "100px",
+              width: "500px",
+              height: "500px",
+              marginTop: "30px",
+            }}
           />
         )}
       </div>
+      <MidSpace />
       <div>
         {results.map((result, index) => {
           return (
@@ -100,6 +107,10 @@ export default function Identify() {
   );
 }
 
+const MidSpace = styled.div`
+  height: 30px;
+`
+
 const IdenBtn = styled.button`
   width: 130px;
   height: 50px;
@@ -115,11 +126,11 @@ const IdenBtn = styled.button`
     color: black;
     border: 1px solid black;
   }
-`
+`;
 
 const Label = styled.label`
   display: inline-block;
-  padding: .5em .75em;
+  padding: 0.5em 0.75em;
   color: black;
   font-size: inherit;
   line-height: normal;
@@ -128,13 +139,12 @@ const Label = styled.label`
   cursor: pointer;
   border: 1px solid #ebebeb;
   border-bottom-color: #e2e2e2;
-  border-radius: .25em;
+  border-radius: 0.25em;
 `;
 
 const LoadText = styled.h2`
   text-align: center;
 `;
-
 
 const InputContainer = styled.div`
   width: 200px;
@@ -169,4 +179,5 @@ const Best = styled.span`
 
 const Container = styled.div`
   margin-top: 30px;
+  margin-left: 280px;
 `;
