@@ -27,6 +27,7 @@ const LinkStyle = styled(Link)`
   &:hover {
     opacity: 0.7
   }
+  font-weight: 600;
 `;
 
 const easeIn = keyframes`
