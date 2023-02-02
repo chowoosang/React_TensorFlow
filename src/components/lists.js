@@ -30,16 +30,20 @@ export default function Lists() {
     )
 }
 
+
 const ModelContainer = styled.div`
   width: 268.73px;
   height: 318.11px;
+  border: 1px solid black;
 `
 
 const Models = styled.li`
-  
+  list-style: none;
 `
 
 const ModelLists = styled.ul`
+  display: flex;
+  justify-content: center;
 `
 
 const Title = styled.p`
