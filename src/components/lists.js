@@ -20,6 +20,7 @@ export default function Lists() {
                 <InnerSpace />
                 <LogoStyle src={logo} alt="이미지" />
               </LogoContainer>
+              <Label>이미지 판별</Label>
             </ModelContainer>
           </Models>
           <Models>
@@ -33,6 +34,13 @@ export default function Lists() {
     </div>
   );
 }
+
+const Label = styled.p`
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 220px;
+  margin-left: 18px;
+`
 
 const InnerSpace = styled.div`
   height: 70px;
