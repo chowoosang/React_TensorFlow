@@ -119,7 +119,7 @@ export default function Identify() {
 const ListContainer = styled.div`
   width: 500px;
   height: 300px;
-  margin: 0 auto;
+  margin-left: 500px;
   margin-top: -440px;
 `;
 
