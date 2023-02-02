@@ -4,7 +4,7 @@ import logo from "../assets/imgs/tensor_logo.png";
 import { useNavigate } from "react-router-dom";
 
 export default function Lists() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <div>
@@ -24,14 +24,34 @@ export default function Lists() {
                 <LogoStyle src={logo} alt="이미지" />
               </LogoContainer>
               <Label>이미지 판별</Label>
-              <Description>ImageNet 데이터베이스의 라벨로 이미지를 분류합니다. (MobileNet)</Description>
+              <Description>
+                ImageNet 데이터베이스의 라벨로 이미지를 분류합니다. (MobileNet)
+              </Description>
             </ModelContainer>
           </Models>
           <Models>
-            <ModelContainer>배경 이미지 인식 및 제거</ModelContainer>
+            <ModelContainer onClick={() => navigate("/image-identify")}>
+              <LogoContainer>
+                <InnerSpace />
+                <LogoStyle src={logo} alt="이미지" />
+              </LogoContainer>
+              <Label>배경 이미지 인식 및 제거</Label>
+              <Description>
+                브라우저에서 이미지를 세분화하여 배경을 제거합니다. (BodyPix.js)
+              </Description>
+            </ModelContainer>
           </Models>
           <Models>
-            <ModelContainer>웹캠 사물 탐지</ModelContainer>
+            <ModelContainer onClick={() => navigate("/image-identify")}>
+              <LogoContainer>
+                <InnerSpace />
+                <LogoStyle src={logo} alt="이미지" />
+              </LogoContainer>
+              <Label>이미지 판별</Label>
+              <Description>
+                ImageNet 데이터베이스의 라벨로 이미지를 분류합니다. (MobileNet)
+              </Description>
+            </ModelContainer>
           </Models>
         </ModelLists>
       </div>
@@ -46,18 +66,18 @@ const Description = styled.p`
   margin-top: -100px;
   width: 208.73px;
   height: 44px;
-`
+`;
 
 const Label = styled.p`
   font-size: 16px;
   font-weight: 600;
   line-height: 220px;
   margin-left: 18px;
-`
+`;
 
 const InnerSpace = styled.div`
   height: 70px;
-`
+`;
 
 const LogoContainer = styled.div`
   width: 120px;
