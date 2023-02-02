@@ -1,8 +1,12 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import { Link } from "react-router-dom";
+import useTitle from "./hooks/title";
 
 export default function Main() {
+  const titleUpdater = useTitle("불러오는 중...")
+  setTimeout(() => titleUpdater("DeepLearning Projects"))
+
   return (
     <div>
       <TopSpace />
