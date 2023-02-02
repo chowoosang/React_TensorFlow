@@ -102,11 +102,19 @@ export default function Identify() {
 
 const IdenBtn = styled.button`
   width: 130px;
-  height: 40px;
+  height: 50px;
   border: none;
   background-color: black;
   color: white;
   font-size: 17px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out;
+  &:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+  }
 `
 
 const Label = styled.label`
