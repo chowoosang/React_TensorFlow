@@ -101,7 +101,12 @@ export default function Identify() {
 }
 
 const IdenBtn = styled.button`
-  
+  width: 130px;
+  height: 40px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 17px;
 `
 
 const Label = styled.label`
