@@ -70,7 +70,7 @@ const Remove = () => {
       <div>
         {loading ? (
           <div>
-            <LoadingText>로딩중...</LoadingText>
+            <LoadingText>제거중...</LoadingText>
             <RedSpinner loading={loading} size={30} />
           </div>
         ) : null}
