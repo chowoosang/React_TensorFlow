@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import logo from '../assets/imgs/tensor_logo.png';
 
 export default function Lists() {
   return (
@@ -14,7 +15,9 @@ export default function Lists() {
       <div>
         <ModelLists>
           <Models>
-            <ModelContainer>이미지 판별</ModelContainer>
+            <ModelContainer>
+                <LogoStyle src={logo} alt="이미지" />
+            </ModelContainer>
           </Models>
           <Models>
             <ModelContainer>배경 이미지 인식 및 제거</ModelContainer>
@@ -27,6 +30,11 @@ export default function Lists() {
     </div>
   );
 }
+
+const LogoStyle = styled.img`
+  width: 120px;
+  height: 110px;
+`
 
 const MidSpace = styled.div`
   width: 597.5px;
