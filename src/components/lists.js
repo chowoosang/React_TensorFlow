@@ -7,9 +7,28 @@ export default function Lists() {
         <div>
             <TopSpace />
             <Title>Tensorflow.js 모델 기반 딥러닝 기능</Title>
+            <div>
+                <ModelLists>
+                    <Models>이미지 판별</Models>
+                    <Models>배경 이미지 인식 및 제거</Models>
+                    <Models>웹캠 사물 탐지</Models>
+                </ModelLists>
+            </div>
         </div>
     )
 }
+
+const ModelContainer = styled.div`
+  width: 268.73px;
+  height: 318.11px;
+`
+
+const Models = styled.li`
+  
+`
+
+const ModelLists = styled.ul`
+`
 
 const Title = styled.p`
   font-size: 33px;
