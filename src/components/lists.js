@@ -42,7 +42,7 @@ export default function Lists() {
             </ModelContainer>
           </Models>
           <Models>
-            <ModelContainer onClick={() => navigate("/image-identify")}>
+            <ModelContainer onClick={() => navigate("/webcam-detection")}>
               <LogoContainer>
                 <InnerSpace />
                 <LogoStyle src={logo} alt="이미지" />
