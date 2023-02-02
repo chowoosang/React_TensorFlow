@@ -88,28 +88,44 @@ export default function Identify() {
         )}
       </div>
       <MidSpace />
-      <div>
+      <ListContainer>
         {results.map((result, index) => {
           return (
             <Container key={result.className}>
-              <span>{result.className}</span>
+              <div
+                style={{
+                  color: "white",
+                  fontSize: "25px",
+                  fontWeight: "600",
+                  paddingLeft: "10px",
+                }}
+              >
+                {result.className}
+              </div>
               <br />
-              <span>
+              <div style={{ color: "white", paddingLeft: "10px" }}>
                 신뢰도: {(result.probability * 100).toFixed(2)}%{" "}
-                {index === 0 && <Best>최고 확률</Best>}
-              </span>
+                {index === 0 && <Best>최고 확률!</Best>}
+              </div>
             </Container>
           );
         })}
-      </div>
+      </ListContainer>
       <div>{imageURL && <IdenBtn onClick={identify}>판별하기</IdenBtn>}</div>
     </div>
   );
 }
 
+const ListContainer = styled.div`
+  width: 500px;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: -440px;
+`;
+
 const MidSpace = styled.div`
   height: 30px;
-`
+`;
 
 const IdenBtn = styled.button`
   width: 130px;
@@ -126,6 +142,8 @@ const IdenBtn = styled.button`
     color: black;
     border: 1px solid black;
   }
+  margin-top: 80px;
+  margin-left: 100px;
 `;
 
 const Label = styled.label`
@@ -172,12 +190,17 @@ const MainTitle = styled.h1`
 `;
 
 const Best = styled.span`
-  background-color: black;
+  background-color: white;
   color: white;
   font-weight: 700;
+  color: black;
+  margin-left: 30px;
+  font-size: 22px;
 `;
 
 const Container = styled.div`
   margin-top: 30px;
   margin-left: 280px;
+  background-color: black;
+  width: 400px;
 `;
