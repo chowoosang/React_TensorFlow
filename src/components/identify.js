@@ -3,12 +3,16 @@ import { useState, useEffect, useRef } from "react";
 import "@tensorflow/tfjs";
 import styled from "styled-components";
 import RedSpinner from "./hooks/spinner";
+import useTitle from "./hooks/title";
 
 export default function Identify() {
   const [isModelLoading, setIsModelLoading] = useState(false);
   const [model, setModel] = useState(null);
   const [imageURL, setImageURL] = useState(null);
   const [results, setResults] = useState([]);
+
+  const titleUpdater = useTitle("불러오는 중...")
+  setTimeout(() => titleUpdater("이미지 분류"))
 
   const imageRef = useRef();
 
