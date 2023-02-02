@@ -83,6 +83,11 @@ const ModelContainer = styled.div`
   border: 1px solid #e6e6e6;
   border-radius: 6px;
   cursor: pointer;
+  transition: width 0.5s ease-in-out;
+  &:hover {
+    width: 300px;
+    height: 320px;
+  }
 `;
 
 const Models = styled.li`
