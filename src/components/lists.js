@@ -12,11 +12,12 @@ export default function Lists() {
 }
 
 const Title = styled.p`
-  font-size: 35px;
+  font-size: 33px;
   font-weight: 600;
   text-align: center;
+  text-decoration: underline;
 `
 
 const TopSpace = styled.div`
-  height: 190px;
+  height: 85px;
 `
