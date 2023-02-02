@@ -1,14 +1,17 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
+import { Link } from "react-router-dom";
 
 export default function Main() {
   return (
     <div>
       <TopSpace />
       <Title>DeepLearning Projects</Title>
+      <Link to="/lists">딥러닝 기능 보러가기</Link>
     </div>
   )
 }
+
 
 const easeIn = keyframes`
   0% {
