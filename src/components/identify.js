@@ -98,12 +98,13 @@ export default function Identify() {
                   fontSize: "25px",
                   fontWeight: "600",
                   paddingLeft: "10px",
+                  paddingTop: '5px'
                 }}
               >
                 {result.className}
               </div>
               <br />
-              <div style={{ color: "white", paddingLeft: "10px" }}>
+              <div style={{ color: "white", paddingLeft: "10px", paddingBottom: '7px' }}>
                 신뢰도: {(result.probability * 100).toFixed(2)}%{" "}
                 {index === 0 && <Best>최고 확률!</Best>}
               </div>
