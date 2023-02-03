@@ -4,6 +4,7 @@ import "@tensorflow/tfjs";
 import styled from "styled-components";
 import RedSpinner from "./hooks/spinner";
 import useTitle from "./hooks/title";
+import Header from "./header";
 
 export default function Identify() {
   const [isModelLoading, setIsModelLoading] = useState(false);
@@ -59,8 +60,8 @@ export default function Identify() {
   console.log(results);
 
   return (
-    <div>
-      <MainTitle>이미지 식별기</MainTitle>
+    <>
+      <Header />
       <InputContainer>
         <Label htmlFor="ex_file">업로드</Label>
         <input
@@ -113,7 +114,7 @@ export default function Identify() {
         })}
       </ListContainer>
       <div>{imageURL && <IdenBtn onClick={identify}>판별하기</IdenBtn>}</div>
-    </div>
+    </>
   );
 }
 
@@ -168,6 +169,7 @@ const LoadText = styled.h2`
 const InputContainer = styled.div`
   width: 200px;
   height: 40px;
+  margin-top: 120px;
   input[type="file"] {
     position: absolute;
     width: 1px;
