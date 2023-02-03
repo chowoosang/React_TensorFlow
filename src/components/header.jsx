@@ -41,6 +41,10 @@ const Lists = styled.li`
     list-style: none;
     font-size: 18px;
     margin-left: 100px;
+    transition: font-size 0.5s ease-in-out;
+    &:nth-child(1):hover {
+        font-size: 20px;
+    }
 `
 
 const ListContainer = styled.ul`
