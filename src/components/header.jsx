@@ -33,6 +33,7 @@ const ListContainer = styled.ul`
   display: flex;
   justify-content: center;
   margin: 0;
+  margin-top: -20px;
 `
 
 const LogoTitle = styled.span`
