@@ -11,9 +11,15 @@ const Header = () => {
                 <LogoTitle>Deep. Projects</LogoTitle>
             </LogoContainer>
             <ListContainer>
-                <Lists>이미지 분류</Lists>
-                <Lists>배경 제거</Lists>
-                <Lists>웹캠 사물 탐지</Lists>
+                <Lists>
+                    <Link to="/image-identify">이미지 분류</Link>
+                </Lists>
+                <Lists>
+                    <Link to="/delete-background">배경 제거</Link>
+                </Lists>
+                <Lists>
+                    <Link to="/webcam-detection">웹캠 사물 탐지</Link>
+                </Lists>
             </ListContainer>
           </HeaderContainer>
         </>
@@ -21,6 +27,8 @@ const Header = () => {
 }
 
 export default Header;
+
+
 
 const TopSpace = styled.div`
     height: 25px;
