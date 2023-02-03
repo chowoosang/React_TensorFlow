@@ -8,6 +8,11 @@ const Header = () => {
             <LogoContainer>
                 <LogoTitle>Deep. Projects</LogoTitle>
             </LogoContainer>
+            <ListContainer>
+                <Lists>이미지 분류</Lists>
+                <Lists>배경 제거</Lists>
+                <Lists>웹캠 사물 탐지</Lists>
+            </ListContainer>
           </HeaderContainer>
         </>
     )
@@ -15,9 +20,20 @@ const Header = () => {
 
 export default Header;
 
-const LogoTitle = styled.p`
+const Lists = styled.li`
+    list-style: none;
+`
+
+const ListContainer = styled.ul`
+  display: flex;
+  justify-content: center;
+  margin: 0;
+`
+
+const LogoTitle = styled.span`
     font-size: 22px;
     font-weight: 600;
+    margin: 0;
 `
 
 const LogoContainer = styled.div`
@@ -30,4 +46,5 @@ const HeaderContainer = styled.header`
     top: 0;
     width: 100%;
     height: 80px;
+    border: 1px solid #DFDFDF;
 `
