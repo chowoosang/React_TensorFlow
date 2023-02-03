@@ -27,6 +27,7 @@ const TopSpace = styled.div`
 
 const Lists = styled.li`
     list-style: none;
+    font-size: 18px;
 `
 
 const ListContainer = styled.ul`
