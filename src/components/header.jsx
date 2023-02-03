@@ -67,6 +67,7 @@ const LogoTitle = styled.span`
     font-size: 22px;
     font-weight: 600;
     margin: 0;
+    cursor: pointer;
 `
 
 const LogoContainer = styled.div`
