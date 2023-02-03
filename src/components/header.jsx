@@ -1,14 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+    const navigate = useNavigate();
+
     return (
         <>
           <HeaderContainer>
             <TopSpace />
             <LogoContainer>
-                <LogoTitle>Deep. Projects</LogoTitle>
+                <LogoTitle onClick={() => navigate("/")}>Deep. Projects</LogoTitle>
             </LogoContainer>
             <ListContainer>
                 <Lists>
