@@ -45,6 +45,9 @@ const Lists = styled.li`
     &:nth-child(1):hover {
         font-size: 20px;
     }
+    &:nth-child(2):hover {
+        font-size: 20px;
+    }
 `
 
 const ListContainer = styled.ul`
