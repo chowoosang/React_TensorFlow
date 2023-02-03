@@ -5,6 +5,7 @@ const Header = () => {
     return (
         <>
           <HeaderContainer>
+            <TopSpace />
             <LogoContainer>
                 <LogoTitle>Deep. Projects</LogoTitle>
             </LogoContainer>
@@ -19,6 +20,10 @@ const Header = () => {
 }
 
 export default Header;
+
+const TopSpace = styled.div`
+    height: 25px;
+`
 
 const Lists = styled.li`
     list-style: none;
