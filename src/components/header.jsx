@@ -12,13 +12,13 @@ const Header = () => {
             </LogoContainer>
             <ListContainer>
                 <Lists>
-                    <Link to="/image-identify">이미지 분류</Link>
+                    <LinkStyle to="/image-identify">이미지 분류</LinkStyle>
                 </Lists>
                 <Lists>
-                    <Link to="/delete-background">배경 제거</Link>
+                    <LinkStyle to="/delete-background">배경 제거</LinkStyle>
                 </Lists>
                 <Lists>
-                    <Link to="/webcam-detection">웹캠 사물 탐지</Link>
+                    <LinkStyle to="/webcam-detection">웹캠 사물 탐지</LinkStyle>
                 </Lists>
             </ListContainer>
           </HeaderContainer>
@@ -28,7 +28,10 @@ const Header = () => {
 
 export default Header;
 
-
+const LinkStyle = styled(Link)`
+    color: black;
+    text-decoration: none;
+`
 
 const TopSpace = styled.div`
     height: 25px;
