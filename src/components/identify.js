@@ -117,6 +117,10 @@ const Image = styled.img`
   width: 500px;
   height: 500px;
   margin-top: 30px;
+  @media screen and (max-width: 768px) {
+    width: 200px;
+    height: 200px;
+  }
 `
 
 const ListContainer = styled.div`
