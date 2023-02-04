@@ -74,17 +74,11 @@ export default function Identify() {
       </InputContainer>
       <div>
         {imageURL && (
-          <img
+          <Image
             src={imageURL}
             alt="미리보기"
             ref={imageRef}
             crossOrigin="origin"
-            style={{
-              marginLeft: "100px",
-              width: "500px",
-              height: "500px",
-              marginTop: "30px",
-            }}
           />
         )}
       </div>
@@ -117,6 +111,13 @@ export default function Identify() {
     </>
   );
 }
+
+const Image = styled.img`
+  margin-left: 100px;
+  width: 500px;
+  height: 500px;
+  margin-top: 30px;
+`
 
 const ListContainer = styled.div`
   width: 500px;
