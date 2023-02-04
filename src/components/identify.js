@@ -129,6 +129,9 @@ const ListContainer = styled.div`
   float: right;
   margin-right: 200px;
   margin-top: -440px;
+  @media screen and (max-width: 768px) {
+    margin-top: -300px;
+  }
 `;
 
 const MidSpace = styled.div`
