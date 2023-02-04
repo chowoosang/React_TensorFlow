@@ -184,15 +184,6 @@ const InputContainer = styled.div`
   margin-left: 100px;
 `;
 
-const MainTitle = styled.h1`
-  text-align: center;
-  width: 100%;
-  height: 40px;
-  background-color: #3498db;
-  color: white;
-  margin-top: 0px;
-`;
-
 const Best = styled.span`
   background-color: white;
   color: white;
