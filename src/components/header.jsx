@@ -36,6 +36,7 @@ export default Header;
 const MenuBar = styled.img`
   width: 50px;
   height: 50px;
+  float: right;
 `
 
 const LinkStyle = styled(Link)`
