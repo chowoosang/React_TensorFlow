@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import menu from '../assets/imgs/menu_bar.png';
 
 const Header = () => {
   const navigate = useNavigate();
@@ -24,12 +25,17 @@ const Header = () => {
             <LinkStyle to="/webcam-detection">웹캠 사물 탐지</LinkStyle>
           </Lists>
         </ListContainer>
+        <MenuBar src={menu} alt="메뉴 로고" />
       </HeaderContainer>
     </>
   );
 };
 
 export default Header;
+
+const MenuBar = styled.img`
+  
+`
 
 const LinkStyle = styled(Link)`
   color: black;
@@ -63,8 +69,8 @@ const ListContainer = styled.ul`
   margin-top: -20px;
   @media screen and (max-width: 768px) {
     flex-direction: column;
+    display: none;
   }
-  display: none;
 `;
 
 const LogoTitle = styled.span`
