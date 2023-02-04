@@ -37,6 +37,12 @@ const MenuBar = styled.img`
   width: 50px;
   height: 50px;
   float: right;
+  margin-top: -35px;
+  margin-right: 10px;
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
 `
 
 const LinkStyle = styled(Link)`
