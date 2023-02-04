@@ -2,14 +2,16 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import menu from '../assets/imgs/menu_bar.png';
+import menu from "../assets/imgs/menu_bar.png";
+import { useState } from "react";
 
 const Header = () => {
   const navigate = useNavigate();
+  const [isClick, setIsClick] = useState(false);
 
   return (
     <>
-      <HeaderContainer>
+      <HeaderContainer isClick={isClick}>
         <TopSpace />
         <LogoContainer>
           <LogoTitle onClick={() => navigate("/")}>Deep. Projects</LogoTitle>
@@ -25,7 +27,13 @@ const Header = () => {
             <LinkStyle to="/webcam-detection">웹캠 사물 탐지</LinkStyle>
           </Lists>
         </ListContainer>
-        <MenuBar src={menu} alt="메뉴 로고" />
+        <MenuBar
+          src={menu}
+          alt="메뉴 로고"
+          onClick={() => {
+            setIsClick(!isClick);
+          }}
+        />
       </HeaderContainer>
     </>
   );
@@ -43,7 +51,7 @@ const MenuBar = styled.img`
   @media screen and (max-width: 768px) {
     display: block;
   }
-`
+`;
 
 const LinkStyle = styled(Link)`
   color: black;
@@ -99,4 +107,7 @@ const HeaderContainer = styled.header`
   width: 100%;
   height: 80px;
   border: 1px solid #dfdfdf;
+  @media screen and (max-width: 768px) {
+    height: ${(props) => (props.isClick ? "200px" : "80px")};
+  }
 `;
