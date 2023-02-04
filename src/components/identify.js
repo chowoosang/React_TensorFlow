@@ -170,7 +170,7 @@ const LoadText = styled.h2`
 const InputContainer = styled.div`
   width: 200px;
   height: 40px;
-  margin-top: 120px;
+  margin-top: 300px;
   input[type="file"] {
     position: absolute;
     width: 1px;
