@@ -84,9 +84,10 @@ const ListContainer = styled.ul`
   margin: 0;
   margin-top: -20px;
   @media screen and (max-width: 768px) {
-    flex-direction: column;
     display: none;
+    flex-direction: column;
   }
+  
 `;
 
 const LogoTitle = styled.span`
