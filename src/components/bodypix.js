@@ -5,6 +5,7 @@ import { useRef } from "react";
 import RedSpinner from "./hooks/spinner";
 import styled from "styled-components";
 import useTitle from "./hooks/title";
+import Header from "./header";
 
 const Remove = () => {
   const canvasRef = useRef(null);
@@ -70,6 +71,7 @@ const Remove = () => {
 
   return (
     <div>
+      <Header />
       <canvas ref={canvasRef} />
       <div>
         {loading ? (
