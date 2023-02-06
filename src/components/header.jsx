@@ -8,10 +8,16 @@ import { useState } from "react";
 const Header = () => {
   const navigate = useNavigate();
   const [isClick, setIsClick] = useState(false);
+  const [isToggle, setIsToggle] = useState(false);
+
+  const onClick = () => {
+    setIsClick(!isClick);
+    setIsToggle(!isToggle);
+  }
 
   return (
     <>
-      <HeaderContainer isClick={isClick}>
+      <HeaderContainer isClick={isClick} isToggle={isToggle}>
         <TopSpace />
         <LogoContainer>
           <LogoTitle onClick={() => navigate("/")}>Deep. Projects</LogoTitle>
@@ -30,9 +36,7 @@ const Header = () => {
         <MenuBar
           src={menu}
           alt="메뉴 로고"
-          onClick={() => {
-            setIsClick(!isClick);
-          }}
+          onClick={onClick}
         />
       </HeaderContainer>
     </>
@@ -84,10 +88,9 @@ const ListContainer = styled.ul`
   margin: 0;
   margin-top: -20px;
   @media screen and (max-width: 768px) {
-    display: none;
     flex-direction: column;
+    display: ${(props) => (props.isToggle ? 'block' : 'none')}
   }
-  
 `;
 
 const LogoTitle = styled.span`
