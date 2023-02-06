@@ -113,6 +113,9 @@ const ModelContainer = styled.div`
 const Models = styled.li`
   list-style: none;
   margin-left: 40px;
+  @media screen and (max-width: 768px) {
+    margin-top: 40px;
+  }
 `;
 
 const ModelLists = styled.ul`
@@ -120,6 +123,7 @@ const ModelLists = styled.ul`
   justify-content: center;
   @media screen and (max-width: 768px) {
     flex-direction: column;
+    margin-left: 65px;
   }
 `;
 
