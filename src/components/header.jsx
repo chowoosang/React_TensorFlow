@@ -89,7 +89,10 @@ const ListContainer = styled.ul`
   margin-top: -20px;
   @media screen and (max-width: 768px) {
     flex-direction: column;
-    display: ${(props) => (props.isToggle ? 'block' : 'none')}
+    display: ${(props) => (props.isToggle ? 'block' : 'none')};
+    text-align: center;
+    margin-right: 90px;
+    line-height: 50px;
   }
 `;
 
