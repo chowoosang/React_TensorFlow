@@ -53,7 +53,6 @@ function Detection() {
 
   return (
     <div className="App">
-      <Header />
       <header className="App-header">
         <Webcam
           ref={webcamRef}
