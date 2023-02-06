@@ -17,12 +17,12 @@ const Header = () => {
 
   return (
     <>
-      <HeaderContainer isClick={isClick} isToggle={isToggle}>
+      <HeaderContainer isClick={isClick}>
         <TopSpace />
         <LogoContainer>
           <LogoTitle onClick={() => navigate("/")}>Deep. Projects</LogoTitle>
         </LogoContainer>
-        <ListContainer>
+        <ListContainer isToggle={isToggle}>
           <Lists>
             <LinkStyle to="/image-identify">이미지 분류</LinkStyle>
           </Lists>
