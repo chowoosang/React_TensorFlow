@@ -127,7 +127,6 @@ const ModelLists = styled.ul`
   justify-content: center;
   @media screen and (max-width: 768px) {
     flex-direction: column;
-    margin-left: 65px;
   }
 `;
 
