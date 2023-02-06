@@ -37,6 +37,7 @@ const Header = () => {
           src={menu}
           alt="메뉴 로고"
           onClick={onClick}
+          isClick={isClick}
         />
       </HeaderContainer>
     </>
@@ -55,6 +56,7 @@ const MenuBar = styled.img`
   @media screen and (max-width: 768px) {
     display: block;
   }
+  cursor: pointer;
 `;
 
 const LinkStyle = styled(Link)`
