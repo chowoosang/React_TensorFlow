@@ -72,7 +72,7 @@ const Remove = () => {
   return (
     <div>
       <Header />
-      <canvas ref={canvasRef} />
+      <canvas ref={canvasRef} style={{ width: '700px', height: '500px', marginTop: '100px' }}/>
       <div>
         {loading ? (
           <div>
