@@ -82,6 +82,12 @@ const Lists = styled.li`
   }
 `;
 
+const easeIn = keyframes`
+  0% {
+    transform: translateY(20px)
+  }
+`
+
 const ListContainer = styled.ul`
   display: flex;
   justify-content: center;
@@ -90,6 +96,7 @@ const ListContainer = styled.ul`
   @media screen and (max-width: 768px) {
     flex-direction: column;
     display: ${(props) => (props.isToggle ? 'block' : 'none')};
+    animation: ${easeIn} 1s;
     text-align: center;
     margin-right: 90px;
     line-height: 50px;
