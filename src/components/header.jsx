@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import menu from "../assets/imgs/menu_bar.png";
@@ -116,5 +116,7 @@ const HeaderContainer = styled.header`
   border: 1px solid #dfdfdf;
   @media screen and (max-width: 768px) {
     height: ${(props) => (props.isClick ? "200px" : "80px")};
+    transition: height 0.5s ${(props) => (props.isClick ? 'ease-in-out' : 'ease-in')}
   }
 `;
+
