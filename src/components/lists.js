@@ -95,6 +95,10 @@ const MidSpace = styled.div`
   height: 90px;
   margin: 0 auto;
   color: #425066;
+  @media screen and (max-width: 768px) {
+    width: 400px;
+  
+  }
 `;
 
 const ModelContainer = styled.div`
