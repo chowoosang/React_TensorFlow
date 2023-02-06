@@ -5,7 +5,6 @@ import * as cocossd from "@tensorflow-models/coco-ssd";
 import Webcam from "react-webcam";
 import '../../../src/App.css'
 import { drawRect } from "./utilities";
-import Header from "../header";
 
 function Detection() {
   const webcamRef = useRef(null);
