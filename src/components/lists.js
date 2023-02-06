@@ -118,6 +118,9 @@ const Models = styled.li`
 const ModelLists = styled.ul`
   display: flex;
   justify-content: center;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const Title = styled.p`
