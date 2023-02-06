@@ -5,10 +5,13 @@ import * as cocossd from "@tensorflow-models/coco-ssd";
 import Webcam from "react-webcam";
 import '../../../src/App.css'
 import { drawRect } from "./utilities";
+import useTitle from "../hooks/title";
 
 function Detection() {
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
+  const titleUpdater = useTitle("불러오는 중...")
+  setTimeout(() => titleUpdater("웹캠 사물 탐지"))
 
   const runCoco = async () => {
     const net = await cocossd.load();
