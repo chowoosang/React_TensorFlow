@@ -68,7 +68,6 @@ export default function Identify() {
           id="ex_file"
           type="file"
           accept="image/*"
-          capture="camera"
           onChange={uploadImage}
         />
       </InputContainer>
