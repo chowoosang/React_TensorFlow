@@ -124,7 +124,7 @@ const HeaderContainer = styled.header`
   height: 80px;
   border: 1px solid #dfdfdf;
   @media screen and (max-width: 768px) {
-    height: ${(props) => (props.isClick ? "200px" : "80px")};
+    height: ${(props) => (props.isClick ? "300px" : "80px")};
     transition: height 0.5s ${(props) => (props.isClick ? 'ease-in-out' : 'ease-in')}
   }
   background-color: white;
