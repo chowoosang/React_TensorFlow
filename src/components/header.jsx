@@ -101,7 +101,8 @@ const ListContainer = styled.ul`
     animation: ${easeIn} 1s;
     text-align: center;
     margin-right: 90px;
-    line-height: 50px;
+    line-height: 70px;
+    margin-top: 30px;
   }
 `;
 
