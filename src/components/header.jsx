@@ -102,7 +102,7 @@ const ListContainer = styled.ul`
     text-align: center;
     margin-right: 90px;
     line-height: 70px;
-    margin-top: 30px;
+    margin-top: 25px;
   }
 `;
 
