@@ -2,10 +2,10 @@ import "@tensorflow/tfjs";
 import * as bodyPix from "@tensorflow-models/body-pix";
 import { useEffect, useState } from "react";
 import { useRef } from "react";
-import RedSpinner from "./hooks/spinner";
 import styled from "styled-components";
 import useTitle from "./hooks/title";
 import Header from "./header";
+
 
 const Remove = () => {
   const canvasRef = useRef(null);
@@ -77,10 +77,9 @@ const Remove = () => {
       </ButtonContainer>
       <div>
         {loading ? (
-          <div>
+          <LoadingContainer>
             <LoadingText>제거중...</LoadingText>
-            <RedSpinner loading={loading} size={30} />
-          </div>
+          </LoadingContainer>
         ) : null}
       </div>
       <canvas
@@ -90,6 +89,10 @@ const Remove = () => {
     </div>
   );
 };
+
+const LoadingContainer = styled.div`
+  
+`
 
 const Button = styled.button`
   width: 150px;
@@ -115,7 +118,6 @@ const ButtonContainer = styled.div`
 `;
 
 const LoadingText = styled.h2`
-  text-align: center;
 `;
 
 export default Remove;
