@@ -80,7 +80,6 @@ function Identify() {
           <input
             type="file"
             accept="image/*"
-            capture="camera"
             className="uploadInput"
             onChange={uploadImage}
             ref={fileInputRef}
