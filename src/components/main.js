@@ -19,8 +19,7 @@ export default function Main() {
 }
 
 const LinkContainer = styled.div`
-  width: 132.94px;
-  height: 18px;
+  width: 140px;
   margin: 0 auto;
 `;
 
