@@ -66,7 +66,7 @@ function Identify() {
     return (
       <>
         <LoadTitle>모델 로딩 중...</LoadTitle>
-        <RedSpinner loading={isModelLoading} size={50} />
+        <RedSpinner loading={isModelLoading} size={40} />
       </>
     )
   }
