@@ -75,10 +75,6 @@ const Remove = () => {
       <ButtonContainer>
         <Button onClick={backgroundRemoval}>제거</Button>
       </ButtonContainer>
-      <canvas
-        ref={canvasRef}
-        style={{ width: "1000px", height: "700px", marginTop: "20px" }}
-      />
       <div>
         {loading ? (
           <div>
@@ -87,6 +83,10 @@ const Remove = () => {
           </div>
         ) : null}
       </div>
+      <canvas
+        ref={canvasRef}
+        style={{ width: "1000px", height: "700px", marginTop: "20px" }}
+      />
     </div>
   );
 };
