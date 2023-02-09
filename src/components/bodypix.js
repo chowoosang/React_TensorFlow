@@ -12,7 +12,7 @@ const Remove = () => {
   const [loading, setLoading] = useState(false);
 
   const titleUpdater = useTitle("불러오는 중...");
-  setTimeout(() => titleUpdater("배경 제거"))
+  setTimeout(() => titleUpdater("배경 제거"));
 
   const loadImage = () => {
     const img = new Image();
@@ -72,7 +72,13 @@ const Remove = () => {
   return (
     <div>
       <Header />
-      <canvas ref={canvasRef} style={{ width: '1000px', height: '700px', marginTop: '100px' }}/>
+      <ButtonContainer>
+        <Button onClick={backgroundRemoval}>제거</Button>
+      </ButtonContainer>
+      <canvas
+        ref={canvasRef}
+        style={{ width: "1000px", height: "700px", marginTop: "100px" }}
+      />
       <div>
         {loading ? (
           <div>
@@ -81,9 +87,6 @@ const Remove = () => {
           </div>
         ) : null}
       </div>
-      <ButtonContainer>
-        <Button onClick={backgroundRemoval}>제거</Button>
-      </ButtonContainer>
     </div>
   );
 };
@@ -108,8 +111,6 @@ const Button = styled.button`
 const ButtonContainer = styled.div`
   width: 150px;
   height: 50px;
-  margin: 0 auto;
-  margin-top: 50px;
 `;
 
 const LoadingText = styled.h2`
