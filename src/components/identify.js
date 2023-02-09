@@ -91,7 +91,7 @@ function Identify() {
           <span className="or">또는</span>
           <input
             type="text"
-            placeholder="이미지 주소 넣기"
+            placeholder="이미지 URL 붙여넣기"
             ref={textInputRef}
             onChange={handleOnChange}
           />
