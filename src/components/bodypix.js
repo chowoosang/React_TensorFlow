@@ -111,6 +111,7 @@ const Button = styled.button`
 const ButtonContainer = styled.div`
   width: 150px;
   height: 50px;
+  margin-top: 30px;
 `;
 
 const LoadingText = styled.h2`
