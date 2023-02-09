@@ -77,7 +77,7 @@ const Remove = () => {
       </ButtonContainer>
       <canvas
         ref={canvasRef}
-        style={{ width: "1000px", height: "700px", marginTop: "100px" }}
+        style={{ width: "1000px", height: "700px", marginTop: "20px" }}
       />
       <div>
         {loading ? (
