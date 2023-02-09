@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import * as mobilenet from "@tensorflow-models/mobilenet";
 import Header from "./header";
+import styled from "styled-components";
+import RedSpinner from "./hooks/spinner";
 
 function Identify() {
   const [isModelLoading, setIsModelLoading] = useState(false);
@@ -61,7 +63,12 @@ function Identify() {
   }, [imageURL]);
 
   if (isModelLoading) {
-    return <h2>Model Loading...</h2>;
+    return (
+      <>
+        <LoadTitle>모델 로딩 중...</LoadTitle>
+        <RedSpinner loading={isModelLoading} size={50} />
+      </>
+    )
   }
 
   return (
@@ -150,3 +157,7 @@ function Identify() {
 }
 
 export default Identify;
+
+const LoadTitle = styled.h2`
+  text-align: center;
+`
