@@ -62,7 +62,7 @@ function Identify() {
       // eslint-disable-next-line react-hooks/exhaustive-deps
 
     }
-  }, [setHistory, imageURL]);
+  }, [imageURL]);
 
   if (isModelLoading) {
     return (
