@@ -59,6 +59,8 @@ function Identify() {
   useEffect(() => {
     if (imageURL) {
       setHistory([imageURL, ...history]);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+
     }
   }, [imageURL]);
 
