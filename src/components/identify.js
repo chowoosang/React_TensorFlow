@@ -135,6 +135,7 @@ function Identify() {
         {history.length > 0 && (
           <div className="recentPredictions">
             <h2>업로드한 이미지</h2>
+            <hr />
             <div className="recentImages">
               {history.map((image, index) => {
                 return (
